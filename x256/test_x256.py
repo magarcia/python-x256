@@ -1,6 +1,6 @@
 from twisted.trial import unittest
 
-from x256 import x256
+import x256
 
 
 class Testx256(unittest.TestCase):
