@@ -9,7 +9,7 @@ except ImportError:
 HERE = os.path.dirname(__file__)
 
 setup(name = "x256",
-    version = '0.1',
+    version = '0.0.1',
     description = "x256: manipulate xterm 256 color codes",
     author = "Martin Garcia",
     author_email = "newluxfero@gmail.com",
@@ -18,6 +18,7 @@ setup(name = "x256",
     packages = ["x256"],
     platforms = ["POSIX", "Windows"],
     long_description = open(os.path.join(HERE, "README.md"), "r").read(),
+    install_requires=["Twisted"],
     classifiers = [
         "Development Status :: 4 - Beta",
         "License :: OSI Approved :: MIT License",
