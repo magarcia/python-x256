@@ -4,4 +4,4 @@ python:
     - 2.7
 
 install: python setup.py install
-script: trial klein
+script: trial x256
