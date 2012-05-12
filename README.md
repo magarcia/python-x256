@@ -29,7 +29,7 @@ or you can use raw ansi escape codes:
 
 output:
 
-![x256 raw beep](screenshots/x256_raw_beep.png)
+![x256 raw beep](https://github.com/magarcia/python-x256/raw/master/screenshots/x256_raw_beep.png)
 
 
 Methods
