@@ -1,3 +1,4 @@
+[![Build Status](https://secure.travis-ci.org/magarcia/python-x256.png?branch=master)](http://travis-ci.org/magarcia/python-x256)
 x256
 ====
 *This is a python version from [node-x256](https://github.com/substack/node-x256)*
