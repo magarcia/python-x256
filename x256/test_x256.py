@@ -1,6 +1,6 @@
 from twisted.trial import unittest
 
-import x256 
+from x256 import x256
 
 
 class Testx256(unittest.TestCase):
@@ -21,7 +21,7 @@ class Testx256(unittest.TestCase):
         color = x256.from_rgb(self.rgb[0], self.rgb[1], self.rgb[2])
         self.assertEqual(self.xcolor, color)
 
-    def test_from_rgb(self):
+    def test_from_hex(self):
         color = x256.from_hex(self.hex)
         self.assertEqual(self.xcolor, color)
 
