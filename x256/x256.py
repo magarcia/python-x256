@@ -285,10 +285,10 @@ def from_rgb(r, g=None, b=None):
     c = r if isinstance(r, list) else [r, g, b]
     best = None
 
-    for i in range(0, len(colors)):
-        d = __distance(colors[i], c)
+    for index, item in enumerate(colors):
+        d = __distance(item, c)
         if(not best or d <= best['distance']):
-            best = {'distance': d, 'index': i}
+            best = {'distance': d, 'index': index}
 
     return best['index']
 
@@ -316,4 +316,4 @@ def to_hex(i):
 
 if __name__ == "__main__":
     ix = from_rgb(220, 40, 150)
-    print '\x1b[38;5;' + str(ix) + 'mBEEEEEP'
+    print('\x1b[38;5;' + str(ix) + 'mBEEEEEP')
