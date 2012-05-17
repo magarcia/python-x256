@@ -1,6 +1,8 @@
-from twisted.trial import unittest
+import unittest
+import sys
 
-import x256
+sys.path = ['..', '.'] + sys.path
+from x256 import x256
 
 
 class Testx256(unittest.TestCase):
@@ -32,3 +34,6 @@ class Testx256(unittest.TestCase):
     def test_to_hex(self):
         color = x256.to_hex(self.xcolor)
         self.assertEqual(self.aprox_hex, color)
+
+if __name__ == '__main__':
+    unittest.main()

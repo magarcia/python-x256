@@ -13,7 +13,7 @@ def __rgb2hex(rgb):
     return (hex(rgb[0]) + hex(rgb[1]) + hex(rgb[2])).replace('0x', '').upper()
 
 
-colors = map(__hex2rgb, ["000000",
+colors = list(map(__hex2rgb, ["000000",
 "800000",
 "008000",
 "808000",
@@ -268,7 +268,7 @@ colors = map(__hex2rgb, ["000000",
 "d0d0d0",
 "dadada",
 "e4e4e4",
-"eeeeee"])
+"eeeeee"]))
 
 
 def __distance(a, b):
@@ -283,14 +283,17 @@ def from_rgb(r, g=None, b=None):
     Return the nearest xterm 256 color code from rgb input.
     """
     c = r if isinstance(r, list) else [r, g, b]
-    best = None
+    best = {}
 
     for index, item in enumerate(colors):
         d = __distance(item, c)
         if(not best or d <= best['distance']):
             best = {'distance': d, 'index': index}
 
-    return best['index']
+    if 'index' in best:
+        return best['index']
+    else:
+        return 1
 
 
 def from_hex(h):
