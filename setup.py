@@ -31,7 +31,7 @@ setup(
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Operating System :: OS Independen",
+        "Operating System :: OS Independent",
         "Topic :: Utilities",
     ],
 )
