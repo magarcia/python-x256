@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import argparse
+
 from math import sqrt
 
 
@@ -315,6 +317,28 @@ def to_hex(i):
     Return hex color from xterm 256 color code.
     """
     return __rgb2hex(colors[i])
+
+def entry():
+    """Parse command line arguments and run utilities."""
+    parser = argparse.ArgumentParser(
+        usage='%(prog)s', description=__doc__,
+    )
+    parser.add_argument(
+        'action', help='Action to take',
+        choices=['from_hex', 'to_rgb', 'to_hex'],
+    )
+    parser.add_argument(
+        'value', help='Value for the action', nargs='1'
+    )
+    parser.parse_args()
+    if parser.action != "from_hex":
+        try:
+            parser.value = int(parser.value)
+        except ValueError:
+            raise argparse.ArgumentError(
+                "Value for this action should be an integer",
+            )
+    locals().get(parser.action)(parser.value)
 
 
 if __name__ == "__main__":
