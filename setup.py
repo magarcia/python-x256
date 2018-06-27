@@ -11,7 +11,7 @@ HERE = os.path.dirname(__file__)
 
 setup(
     name = "x256",
-    version = '0.0.2',
+    version = '0.0.3',
     description = "x256: manipulate xterm 256 color codes",
     author = "Martin Garcia",
     author_email = "newluxfero@gmail.com",
@@ -34,4 +34,9 @@ setup(
         "Operating System :: OS Independen",
         "Topic :: Utilities",
     ],
+    entry_points={
+        'console_scripts': [
+            'x256 = x256.x256:entry',
+        ]
+    },
 )
