@@ -1,4 +1,4 @@
-# x256 [![Tests](https://github.com/magarcia/python-x256/actions/workflows/test.yml/badge.svg)](https://github.com/magarcia/python-x256/actions) [![PyPI version](https://badge.fury.io/py/x256.svg)](https://pypi.org/project/x256/)
+# x256 [![Tests](https://github.com/magarcia/python-x256/actions/workflows/test.yml/badge.svg)](https://github.com/magarcia/python-x256/actions/workflows/test.yml) [![Code Analysis](https://github.com/magarcia/python-x256/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/magarcia/python-x256/actions/workflows/codeql-analysis.yml) [![PyPI version](https://badge.fury.io/py/x256.svg)](https://pypi.org/project/x256/)
 
 _This is a python version from [node-x256](https://github.com/substack/node-x256)_
 
